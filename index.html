@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Álbum de Vacaciones</title>
+<link rel="stylesheet" href="estyles.css">
 </head>
 <body>
-    <h1>Viajes a texas</h1>
+<div>
+    
+    <div class="container-banderas">
+        <img class="banderas" src="img/ecuador.jpg" alt="">
+        <h1>Álbum de Vacaciones</h1>
+        <img class="banderas" src="img/estados-unidos.jpg" alt="">
+    </div>
+</div>
+<div class="collage">
+<!-- Imágenes -->
+    <script>
+        const images = [
+            "IMG-20250211-WA0006.jpg", "IMG-20250211-WA0015.jpg", "IMG-20250211-WA0016.jpg", "IMG-20250211-WA0018.jpg",
+            "IMG-20250211-WA0086.jpg", "IMG-20250211-WA0089.jpg", "IMG-20250211-WA0090.jpg", "IMG-20250211-WA0096.jpg",
+            "IMG-20250212-WA0011.jpg", "IMG-20250212-WA0012.jpg", "IMG-20250212-WA0013.jpg", "IMG-20250212-WA0014.jpg",
+            "IMG-20250212-WA0073.jpg", "IMG-20250212-WA0075.jpg", "IMG-20250212-WA0076.jpg", "IMG-20250212-WA0077.jpg",
+            "IMG-20250212-WA0078.jpg", "IMG-20250212-WA0079.jpg", "IMG-20250212-WA0080.jpg", "IMG-20250220-WA0081.jpg",
+            "IMG-20250220-WA0082.jpg", "IMG-20250212-WA0083.jpg", "IMG-20250220-WA0084.jpg", "IMG-20250220-WA0090.jpg",
+            "IMG-20250220-WA0095.jpg", "IMG-20250220-WA0096.jpg", "IMG-20250220-WA0097.jpg", "IMG-20250220-WA0098.jpg",
+            "IMG-20250220-WA0099.jpg", "IMG-20250220-WA0100.jpg", "IMG-20250220-WA0101.jpg", "IMG-20250220-WA0102.jpg",
+            "IMG-20250220-WA0103.jpg", "IMG-20250220-WA0104.jpg", "IMG-20250220-WA0105.jpg", "IMG-20250220-WA0106.jpg",
+            "IMG-20250220-WA0107.jpg", "IMG-20250220-WA0108.jpg", "IMG-20250220-WA0109.jpg", "IMG-20250220-WA0110.jpg",
+            "IMG-20250220-WA0111.jpg", "SAVE_20250213_183746.jpg", "WhatsApp Image 2025-02-21 at 2.37.14 PM.jpeg", "WhatsApp Image 2025-02-21 at 2.37.14 PM (1).jpeg",
+            "WhatsApp Image 2025-02-21 at 2.37.50 PM.jpeg", "WhatsApp Image 2025-02-21 at 2.37.50 PM (1).jpeg"
+        ];
+
+        images.forEach((image, index) => {
+            document.write(`
+                <div class="photo-frame">
+                    <img src="img/${image}" alt="Imagen ${index + 1}">
+                    <div class="caption">Recuerdo especial ${index + 1} 📸</div>
+                </div>
+            `);
+        });
+    </script>
+
+    <!-- Videos -->
+    <script>
+        const videos = [
+            "VID-20250211-WA0094.mp4", "VID-20250212-WA0064.mp4", "VID-20250213-WA0002.mp4",
+            "VID-20250215-WA0022.mp4", "VID-20250219-WA0063.mp4", "VID-20250219-WA0064.mp4", "VID-20250219-WA0065.mp4",
+            "VID-20250219-WA0075.mp4", "VID-20250220-WA0036.mp4"
+        ];
+
+        videos.forEach((video, index) => {
+            document.write(`
+                <div class="photo-frame">
+                    <video controls>
+                        <source src="img/${video}" type="video/mp4">
+                        Tu navegador no soporta videos.
+                    </video>
+                    <div class="caption">Video memorable ${index + 1} 🎥</div>
+                </div>
+            `);
+        });
+    </script>
+</div>
+<footer>
+    <p>OSCAR NOBOA | 2025</p>
+</footer>
 </body>
 </html>
