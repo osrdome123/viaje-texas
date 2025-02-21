@@ -17,6 +17,7 @@ h1 {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     background: linear-gradient(45deg, #111370, #4f5a69, #303030, #7f8886);
     background-clip: text;
+    text-transform: uppercase;
     color: transparent;
     padding: 10px 20px;
     border-radius: 10px;
@@ -101,4 +102,33 @@ footer {
     font-style: italic;
     letter-spacing: 1px;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Responsividad para pantallas más grandes */
+@media (max-width: 768px) {
+    .banderas {
+        max-width: 120px; /* Ajusta el tamaño de las banderas en pantallas medianas */
+    }
+}
+
+/* Responsividad para pantallas más pequeñas (teléfonos) */
+@media (max-width: 480px) {
+    .container-banderas {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas muy pequeñas */
+        align-items: center; /* Alinea todo al centro */
+        margin: 10px; /* Menos margen para pantallas pequeñas */
+    }
+
+    .banderas {
+        max-width: 100%; /* Las imágenes se ajustan completamente al ancho disponible */
+    }
+
+    h1 {
+        font-size: 2rem; /* Texto más pequeño en pantallas pequeñas */
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 }
